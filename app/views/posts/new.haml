@@ -1,0 +1,35 @@
+.title
+  %h1 Create your post
+
+.menu
+  = link_to 'Back', posts_path
+
+= form_with(model: @post) do |form|
+  .posts
+    %br
+    %div
+      = form.label :title
+      = form.text_field :title
+    %div
+      = form.label :body
+      = form.text_field :body
+    %br
+    = form.submit
+
+
+-# this is how it would look like in html:
+-# <%= form_with(model: @post) do |form| %>
+-#   <div class="posts">
+-#     <div>
+-#       <%= form.label :title %>
+-#       <%= form.text_field :title %>
+-#     </div>
+-#     <div>
+-#       <%= form.label :body %>
+-#       <%= form.text_field :body %>
+-#     </div>
+-#   </div>
+-#   <div class="menu">
+-#     <%= form.submit %>
+-#   </div>
+-# <% end %>
