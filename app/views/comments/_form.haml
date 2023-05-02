@@ -1,0 +1,17 @@
+
+= form_with(model: [post, comment]) do |form|
+  .form
+    %div
+      = form.label :author
+      = form.text_field :author
+      - if comment.present?
+        - comment.errors.full_messages_for(:author).each do |message|
+          .error-message= message
+    %div
+      = form.label :comment
+      = form.text_area :body, placeholder: "Add your comment"
+      - if comment.present?
+        - comment.errors.full_messages_for(:comment).each do |message|
+          .error-message= message
+      %br
+    = form.submit 'Create'

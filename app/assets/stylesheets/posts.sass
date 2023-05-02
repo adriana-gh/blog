@@ -11,18 +11,79 @@ body
 
 .menu
   background-color: #8fffe4
-  padding: 10px 35px
+  padding: 0px 35px
+
+.menu, #sidemenu
   a
     color: inherit
     text-decoration: none
+    margin-right: 10px
+    padding: 10px 5px
+    display: inline-block
+  a:hover, button:hover
+    background-color: #bfffe4
+    cursor: pointer
+  button
+    background-color: inherit
+    border: none
+    font: inherit
+    padding: 10px 5px
+    display: inline-block
+  form.button_to
+    display: inline-block
+
+.container
+  background-color: #efeff5
+  padding: 20px 35px
+  a
+    color: inherit
 
 .posts
-  h1
-    color: #000000
+  padding-bottom: 20px
   h3
     color: #7b68ee
+    margin-top: 0.5em
     a
       color: inherit
       text-decoration: none
-  background-color: #efeff5
-  padding: 5px 35px 10px 35px
+
+.with_sidemenu
+  width: 85%
+
+#sidemenu
+  width: 13%
+  float: right
+  a:hover, button:hover
+    background-color: inherit
+
+.footer
+  padding: 5px 0px
+  color: #7b68ee
+
+.truncate
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+.form
+  width: 50%
+  label
+    display: block
+    margin: 3px 0px
+  input
+    width: 100%
+    line-height: 1.6em
+    padding: 3px 5px
+  input[type="submit"]
+    width: 100px
+    height: 2.5em
+  textarea
+    width: 100%
+    resize: none
+    height: 150px
+    padding: 3px 5px
+  .error-message
+    color: #cc0033
+    display: inline-block
+    font-size: 12px
+    line-height: 15px

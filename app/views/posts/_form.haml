@@ -1,0 +1,16 @@
+
+= form_with(model: post) do |form|
+  .form
+    %div
+      = form.label :title
+      = form.text_field :title
+      - post.errors.full_messages_for(:title).each do |message|
+        .error-message= message
+    %div
+      = form.label :body
+      = form.text_area :body, placeholder: "Add text"
+      - post.errors.full_messages_for(:body).each do |message|
+        .error-message= message
+        %br
+      %br
+    = form.submit

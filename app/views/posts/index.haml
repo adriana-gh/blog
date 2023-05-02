@@ -1,0 +1,16 @@
+.title
+  %h1 Posts
+
+.menu
+  = link_to '+ Create new post', new_post_path
+
+.container
+  - @posts.each do |post|
+    #sidemenu
+      = link_to edit_post_path(post) do
+        %i.fa-regular.fa-pen-to-square
+      = button_to post_path(post), method: :delete do
+        %i.fa-sharp.fa-regular.fa-trash-can
+    .posts.with_sidemenu.truncate
+      %h3= link_to post.title, post
+      = post.body

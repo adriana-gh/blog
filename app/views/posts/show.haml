@@ -1,0 +1,25 @@
+.title
+  %h1
+    = @post.title
+
+.menu
+  = link_to posts_path do
+    %i.fa-solid.fa-angles-left
+    Back
+  = link_to edit_post_path(@post) do
+    %i.fa-regular.fa-pen-to-square
+    Edit
+  = button_to post_path(@post), method: :delete do
+    %i.fa-sharp.fa-regular.fa-trash-can
+    Delete
+
+.container
+  .posts
+    = @post.body
+
+  .footer
+    id: #{@post.id}
+    created at: #{@post.created_at}
+
+  .comments
+    = render 'comments/form', post: @post, comment: @comment || @post.comments.build
