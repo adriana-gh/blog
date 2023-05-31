@@ -11,6 +11,12 @@
       = form.text_area :body, placeholder: "Add text"
       - post.errors.full_messages_for(:body).each do |message|
         .error-message= message
+    %div
+      = form.label :status
+      = form.select :status, Post.statuses, selected: 'public'
+      - post.errors.full_messages_for(:status).each do |message|
+        .error-message= message
+
         %br
       %br
     = form.submit

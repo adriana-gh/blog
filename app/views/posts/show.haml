@@ -22,4 +22,8 @@
     created at: #{@post.created_at}
 
   .comments
+    %h3 Comments
+    = render @comments
+
+  .comments
     = render 'comments/form', post: @post, comment: @comment || @post.comments.build

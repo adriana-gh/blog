@@ -1,0 +1,7 @@
+.header
+  #{comment.author}:
+= comment.body
+.footer
+  created at: #{comment.created_at}
+  = button_to [comment.post, comment], method: :delete do
+    %i.fa-sharp.fa-regular.fa-trash-can

@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.visible
   end
 
   def show
     @post = Post.find(params[:id])
+    @comments = @post.comments.visible
   end
 
   def new
@@ -46,7 +47,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :status)
   end
 
 end

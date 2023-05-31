@@ -5,26 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba3637e2-19ab-4d19-870d-c990c0800899" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/comments_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/comments/_form.haml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/posts/_form.haml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/posts/edit.haml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/posts/index.haml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/posts/index3.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/posts/show.haml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/concerns/visible.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/comments/_comment.haml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/posts.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/posts.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/comments_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/comments_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/comment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/comment.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/post.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/index.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/new.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/new.haml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/show.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/_form.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/_form.haml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/index.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/index.haml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/index3.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/show.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/show.haml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,22 +43,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/adriana/Development/rails_blog/app/views/posts/comments",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "ruby.rails.projectView.checked": "true",
-    "ruby.structure.view.model.defaults.configured": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/adriana/Development/rails_blog/app/views/posts/comments&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/views/posts/comments" />
@@ -90,7 +82,8 @@
       <workItem from="1678087812980" duration="2116000" />
       <workItem from="1678613679326" duration="8353000" />
       <workItem from="1680245738211" duration="16224000" />
-      <workItem from="1681062957686" duration="28837000" />
+      <workItem from="1681062957686" duration="29168000" />
+      <workItem from="1683448439196" duration="13079000" />
     </task>
     <servers />
   </component>
